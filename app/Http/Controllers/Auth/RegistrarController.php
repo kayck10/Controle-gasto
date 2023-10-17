@@ -20,6 +20,6 @@ class RegistrarController extends Controller
     {    
         $request['password'] = Hash::make($request->password);
         $user = User::create($request->all());
-        return redirect()->route('login.usuario');
+        return redirect()->route('login');
     }
 }

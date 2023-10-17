@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
            // $table->unsignedBigInteger('Conta_id');
             $table->foreignId('Conta_id')->constrained('contas', 'id')->onDelete('cascade');
-            $table->integer('data');
+            $table->date('data');
             $table->float('valor');
-            $table->integer('descricao');
+            $table->string('descricao');
             $table->timestamps();
         });
     }

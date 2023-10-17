@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Despesa extends Model
 {
     protected $table;
-    protected $fillable = ['Conta_id', 'data', 'tipo', 'descricao'];
+    protected $fillable = ['valor','Conta_id', 'data', 'tipo', 'descricao'];
 }

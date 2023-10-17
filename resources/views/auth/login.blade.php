@@ -35,7 +35,7 @@
                     <label for="exampleInputPassword1" class="form-label">Senha</label>
                     <input type="password" name="password" class="form-control" id="password">      
                 </div>
-          <div>
+          <div class="d-grid gap-2">
                <button type="submit" class="btn btn-primary">Entrar</button>
           </div>
             </form>

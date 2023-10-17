@@ -20,39 +20,25 @@
 
     <div>
         <fieldset>
-            <form action="{{route('registrar.store')}}" method="POST" class="col-3 mx-auto">
-              
-                <legend>Cadastro</legend>
-
+            <form action="{{route('conta.store')}}" method="POST" class="col-3 mx-auto">
                 @csrf
 
+                <legend>Cadastrar Conta</legend>
+                
                 <div class="mb-3">
-
-                    <label class="form-label">Nome</label>
+                    <label class="form-label">Nome da instituição</label>
                     <input type="text" name="name" class="form-control" id="nome">
                     <div class="form-text"></div>
-
                 </div>
 
                 <div class="mb-3">
-
-                    <label class="form-label">Email</label>
-                    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text"></div>
-                
+                    <label class="form-label">Saldo da Conta</label>
+                    <input type="text" name="saldo" class="form-control" id="saldo">                
                 </div>
 
-                <div class="mb-3">
-
-                    <label for="exampleInputPassword1" class="form-label">Senha</label>
-                    <input type="password" name="password" class="form-control" id="password">
-             
-                </div>
-
-          <div class="d-grid gap-2">
-               <button class="btn btn-primary" type="submit">Enviar</button>
+          <div>
+               <a class="d-grid gap-2" href="{{route('index.usuario')}}"> <button type="submit" class="btn btn-block btn-primary">Cadastrar</button></a>
           </div>
-
 
             </form>
         </fieldset>

@@ -18,26 +18,37 @@
           </nav>
     </div>
     
-        <h2 class="mt-5 col-1 mx-auto">Conta</h2>
 
-    <table class="table table-striped">
+ 
+
+    <table class="mt-4 table table-striped">
+
         <thead class="table-dark">
-            <th>Valor</th>
-            <th>Data</th>
-            <th>Tipo</th>
+            <th>Conta</th>
+            <th>Receita</th>
+            <th>Despesa</th>
+            <th>Adicionar Despesa</th>
+            <th>Adicionar Receita</th>
             <th>Saldo</th>
         </thead>
-
-        <tbody>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tbody>
+       
+        @foreach ($contas as $conta)
+        
+        <tr>
+            <tbody>
+                <td>{{$conta->nome}}</td>
+                <td><a href="{{route('receita.edit', $conta->id)}}">Ver Receita</a></td>
+                <td><a href="{{route('despesa.edit', $conta->id)}}">Ver Despesas</a></td>
+                <td><a href="{{route('despesa', $conta->id)}}"> <button class="btn btn-danger">Adicionar Despesa</button></a></td>
+                <td><a href="{{route('receita.create', $conta->id)}}"> <button class="btn btn-success">Adicionar Receita</button></a></td>
+                <td>{{$conta->saldo}}</td>
+            </tbody>
+        </tr>
+        @endforeach
     </table>
-    <div class="col-3 mx-auto">
-            <a href="{{route('receita.create')}}"><button class="btn  btn-info">Adicionar Receita</button></a>
-            <a href=""><button class="btn btn-danger">Adicionar Despesa</button></a>
+    
+    <div class=" col-1 mx-auto mb-3">
+        <a href="{{route('conta.create')}}"><button class="btn btn-primary">Criar conta</button></a>
     </div>
 
 </body>

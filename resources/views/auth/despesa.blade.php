@@ -20,15 +20,21 @@
 
     <div>
         <fieldset>
-              <form action="{{route('receita.store', $conta->id)}}" method="POST" class="col-3 mx-auto">
+              <form action="{{route('despesa.store', $conta->id)}}" method="POST" class="col-3 mx-auto">
               @csrf
-            <input type="hidden" name="Conta_id" value="{{$conta->id}}">
+
                       <div class="col-2 mt-5 mx-auto">
-                        <label class="form-label">Adicionar receita</label>   
+                        <label class="form-label">Adicionar Despesa</label>
                       </div>
+
                         <div class="mb-3">
                             <label class="form-label">Valor</label>
-                            <input type="text" value="$" name="valor" class="form-control" id="valor">       
+                            <input type="number" name="valor" class="form-control" id="valor">       
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tipo</label>
+                            <input type="text" name="tipo" class="form-control" id="tipo">       
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Data</label>
@@ -42,7 +48,7 @@
 
                 
           <div class="d-grid gap-2">
-               <button type="submit" class="btn btn-primary">Adicionar</button>
+               <button type="submit" class="btn btn-primary">Adicionar Despesa</button>
           </div>
 
 
